@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>명언 생성기</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <img src = "bg.jpg">
+    <div class = "container">
+        <h1>[ 하버드 도서관의 명언 40가지 ]</h1>
+        <input type = "text" id = "quote" readOnly>
+        <button id = "btn">UPDATE</button>
+        <button id = "copy" onclick = copy()>COPY</button>
+    </div>
+    
+    <script src = "app.js"></script>
+    <script>
+        function copy() {
+            let quote = document.querySelector("#quote");
+            quote.focus();
+            quote.select();
+            document.execCommand("copy");
+            alert("COPIED!");
+        }
+    </script>
+</body>
+</html>
